@@ -1,155 +1,71 @@
-# SecureVault - Quick Start Guide
+# Quick Reference - SecureVault Pro
 
-## 🚀 5-Minute Setup
+## 🚀 One-Line Quick Start
 
-### Step 1: Verify Requirements
 ```bash
-# Check Java version (need Java 21+)
-java --version
-
-# If not installed:
-sudo apt update
-sudo apt install openjdk-25-jdk
+chmod +x run.sh && ./run.sh
 ```
 
-### Step 2: Run the Application
+## 📝 Demo Login Credentials
+- **Username:** `test`
+- **Password:** `12345`
+
+> 💡 The demo account includes 8 sample credentials to showcase all features!
+
+## ⌨️ Essential Shortcuts
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl+N` | Add new credential |
+| `Ctrl+F` | Search |
+| `Ctrl+L` | Lock vault |
+| `Ctrl+Shift+C` | Copy password |
+| `Del` | Delete selected |
+| `Enter` | Edit selected |
+
+## 🔒 Security Features
+- AES-256-CBC encryption
+- PBKDF2 (100,000 iterations)
+- SHA-256 authentication
+- Auto-lock after 5 minutes
+- Clipboard auto-clear (30s)
+
+## 📂 Key Files
+- `src/` - Java source code
+- `lib/` - Dependencies (SQLite, SLF4J)
+- `docs/` - Full documentation
+- `securevault.db` - Your encrypted vault
+- `run.sh` - Launch script
+
+## 🛠️ Manual Commands
+
+### Compile
 ```bash
-cd /path/to/PRoejct
-chmod +x run.sh
-./run.sh
+mkdir -p bin
+javac -Xlint:all -cp "lib/*:." -d bin src/*.java
 ```
 
-That's it! The script automatically:
-- ✅ Downloads required libraries
-- ✅ Compiles source code
-- ✅ Launches the application
-
-### Step 3: Login
-Use one of the default accounts:
-
-| Username | Password |
-|----------|----------|
-| Abin | Abin@2006 |
-| Advaith | Advaith@2006 |
-
----
-
-## 📱 Basic Usage
-
-### Add a Password
-1. Click **Add** button
-2. Fill in the form:
-   - Service: "Gmail"
-   - Username: "myemail@gmail.com"
-   - Password: "MySecurePass123!"
-   - Category: "Email"
-3. Click **Save**
-
-### Copy a Password
-1. Select the row
-2. Click **Copy Password**
-3. Paste anywhere (Ctrl+V)
-
-### Generate Random Password
-1. Click **Generate**
-2. Choose length and character types
-3. Click **Generate**
-4. Password copied automatically!
-
-### Check Password Strength
-1. Select a row
-2. Click **Check Strength**
-3. View detailed analysis
-
-### Switch Theme
-- Click **Theme** button to toggle Light/Dark mode
-
-### Logout
-- Click **Logout** to return to login screen
-
----
-
-## 🎯 Common Tasks
-
-### Create Your Own Account
-1. Click **Create User** on login screen
-2. Enter username and password (min 6 chars)
-3. Start adding your passwords!
-
-### Edit Existing Password
-1. Select the row
-2. Click **Edit**
-3. Modify fields
-4. Click **Save**
-
-### Delete Password
-1. Select the row
-2. Click **Delete**
-3. Confirm deletion
-
-### Right-Click Menu
-- Right-click any row for quick copy options
-
----
-
-## ⚡ Keyboard Shortcuts
-
-- **Enter** in password field → Login
-- **Ctrl+C** (after copying) → Paste password
-- **Double-click** row → Edit credential
-
----
-
-## 🆘 Troubleshooting
-
-### "JDBC Driver not found"
+### Run
 ```bash
-# Run this once:
-./run.sh
-# It will download missing libraries
+java -cp "bin:lib/*" SecureVaultSwingEnhanced
 ```
 
-### "Wrong password"
-- Double-check: Username = "Abin", Password = "Abin@2006" (case-sensitive)
-- Try other account: "Advaith" / "Advaith@2006"
-
-### Application won't start
+### Clean Build
 ```bash
-# Check Java:
-java --version
-
-# Should show Java 21 or higher
-# If not, install:
-sudo apt install openjdk-25-jdk
+rm -rf bin && mkdir bin && javac -cp "lib/*:." -d bin src/*.java
 ```
 
-### Database locked
-```bash
-# Close all instances:
-pkill -9 java
+## 📚 Documentation
+- [Full README](README.md) - Complete guide
+- [FEATURES.md](docs/FEATURES.md) - All features
+- [CHANGELOG.md](docs/CHANGELOG.md) - Version history
+- [FIXES_APPLIED.md](docs/FIXES_APPLIED.md) - Bug fixes
 
-# Restart:
-./run.sh
-```
-
----
-
-## 📖 Next Steps
-
-- Read **README.md** for full feature list
-- Read **TECHNICAL_DOCUMENTATION.md** for implementation details
-- Explore the application and add your passwords!
+## 💡 Tips
+1. Change default password immediately
+2. Use strong master passwords
+3. Enable favorites for important credentials
+4. Regular exports for backup
+5. Check Health Dashboard for weak passwords
 
 ---
-
-**Quick Links**:
-- 📝 Full Documentation: README.md
-- 🔧 Technical Details: TECHNICAL_DOCUMENTATION.md
-- 💾 Database: securevault.db
-- 📂 Source Code: src/ directory
-
-**Support**: Check README.md troubleshooting section for detailed help
-
----
-
-**Last Updated**: October 28, 2025
+For detailed information, see [README.md](README.md)

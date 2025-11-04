@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.security.SecureRandom;
 
+@SuppressWarnings("serial")
 public class PasswordGeneratorDialog extends JDialog {
 
     private static final String UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

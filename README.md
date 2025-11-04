@@ -1,276 +1,1992 @@
-# SecureVault - Password Manager# SecureVault - Multi-User Password Manager# SecureVault - Password Manager## Getting Started
+# 🔐 SecureVault Pro - Password Manager# 🔐 SecureVault Pro - Password Manager
 
 
 
-## 📋 Project Overview
+![Status](https://img.shields.io/badge/status-production%20ready-brightgreen)![Status](https://img.shields.io/badge/status-production%20ready-brightgreen)
 
+![Java](https://img.shields.io/badge/java-17+-orange)![Java](https://img.shields.io/badge/java-17+-orange)
 
+![License](https://img.shields.io/badge/license-MIT-blue)![License](https://img.shields.io/badge/license-MIT-blue)
 
-**SecureVault** is a secure, multi-user password management application built with Java Swing and SQLite. It provides a modern GUI for storing, managing, and organizing credentials with advanced security features including SHA-256 password hashing, password strength analysis, and secure password generation.A secure, feature-rich password manager built with Java Swing and SQLite database. Supports multiple users, each with their own encrypted password vault.
 
 
+**Version 3.0** - A beautiful, feature-rich password management application with military-grade security, modern UI, and comprehensive password management features.**Version 3.0** - A beautiful, feature-rich password management application with military-grade security, modern UI, and comprehensive password management features.
 
-## ✨ Key Features
 
 
+------
 
-### 🔐 Security Features## FeaturesA modular, database-backed password manager with Swing GUI.Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-- **Multi-User Authentication**: Secure login system with user isolation
 
-- **SHA-256 Hashing**: All user passwords are hashed with unique 16-byte salts
+## 📋 Table of Contents## 📋 Table of Contents
 
-- **Password Masking**: Credentials displayed with asterisks (••••••)
 
-- **Secure Password Generation**: Cryptographically secure random password generator### 🔐 Multi-User System
 
-- **Password Strength Meter**: Real-time visual strength analysis with animated UI
+- [Overview](#-overview)- [Overview](#-overview)
 
-- **User Authentication**: Secure SHA-256 hashed passwords with salt
+- [Features](#-features)- [Features](#-features)
 
-### 🎨 User Interface
+- [Quick Start](#-quick-start)- [Screenshots](#-screenshots)
 
-- **Modern Design**: Clean, intuitive Java Swing interface- **Multiple Users**: Each user has a separate password vault## Project Structure## Folder Structure
+- [Installation](#-installation)- [Quick Start](#-quick-start)
 
-- **Dual Theme Support**: Light and Dark themes with proper contrast
+- [Usage](#-usage)- [Installation](#-installation)
 
-- **Interactive Table**: Sortable credential table with visual strength indicators- **Default User**: Pre-configured user `Abin` with password `Abin@2006`
+- [Security](#-security)- [Usage](#-usage)
 
-- **Context Menu**: Right-click menu for quick actions
+- [Documentation](#-documentation)- [Security](#-security)
 
-- **Live Strength Feedback**: Real-time password strength visualization- **Create New Users**: Easy user registration from login screen
+- [Contributing](#-contributing)- [Documentation](#-documentation)
 
+- [License](#-license)- [Contributing](#-contributing)
 
+- [License](#-license)
 
-### 💼 Credential Management- **Logout**: Switch between users without closing the application
+---
 
-- **Add/Edit/Delete**: Full CRUD operations for credentials
+---
 
-- **Copy to Clipboard**: One-click copy for passwords and usernames```The workspace contains two folders by default, where:
+## 📋 Overview
 
-- **Password Generator**: Customizable length and character sets### 🔑 Password Management
+## 📋 Overview
 
-- **Strength Checker**: Detailed password analysis with recommendations
+**SecureVault Pro** is a secure, open-source desktop password manager built with Java Swing and SQLite. It provides military-grade AES-256 encryption for password storage with a modern, intuitive user interface.
 
-- **Add/Edit/Delete** credentials with title, username, and passwordPRoejct/
+**SecureVault Pro** is a secure, open-source desktop password manager built with Java Swing and SQLite. It provides military-grade AES-256 encryption for password storage with a modern, intuitive user interface inspired by contemporary design principles.
 
-## 🛠️ Technical Stack
+### Why SecureVault Pro?
 
-- **Copy to Clipboard** with auto-clear (12 seconds for security)
+### Why SecureVault Pro?
 
-| Component | Technology |
+- ✅ **100% Offline** - Your data never leaves your computer
 
-|-----------|-----------|- **Right-click menu** for quick password copy├── src/- `src`: the folder to maintain sources
+- ✅ **Open Source** - Transparent security you can audit- ✅ **100% Offline** - Your data never leaves your computer
 
-| **Language** | Java 25 (with preview features) |
+- ✅ **Zero Dependencies** - No external services or subscriptions required- ✅ **Open Source** - Transparent security you can audit
 
-| **GUI Framework** | Java Swing |- **Persistent Storage** in SQLite database
+- ✅ **Cross-Platform** - Works on Linux, macOS, and Windows- ✅ **Zero Dependencies** - No external services or subscriptions
 
-| **Database** | SQLite 3 |
+- ✅ **Lightweight** - Fast and resource-efficient- ✅ **Cross-Platform** - Works on Linux, macOS, and Windows
 
-| **JDBC Driver** | sqlite-jdbc-3.44.1.0.jar |│   ├── SecureVaultSwing.java       # Main UI application- `lib`: the folder to maintain dependencies
+- ✅ **Lightweight** - Fast and resource-efficient
 
-| **Logging** | SLF4J 2.0.9 |
+---
 
-| **Security** | java.security.MessageDigest (SHA-256) |### 🎨 User Interface
+---
 
-| **Build Tool** | javac (manual compilation) |
+## ✨ Features
 
-- **Clean Modern Design** with themed interface│   ├── Database.java                # SQLite database handler (CRUD operations)
+## ✨ Features
 
-## 📁 Project Structure
+### 🔒 Security Features
 
-- **Password Strength Meter**: 5-segment visual bars showing strength
+- **AES-256-CBC Encryption** - Military-grade encryption for all passwords### 🔒 Security Features
 
-```
+- **PBKDF2 Key Derivation** - 100,000 iterations for secure key generation- **AES-256-CBC Encryption** - Military-grade encryption for all passwords
 
-PRoejct/- **Live Strength Indicator**: Real-time strength check while typing│   ├── PasswordGenerator.java      # Password generation utilityMeanwhile, the compiled output files will be generated in the `bin` folder by default.
+- **SHA-256 Authentication** - Salted password hashing for user accounts- **PBKDF2 Key Derivation** - 100,000 iterations for secure key generation
 
-├── src/
+- **Session Timeout** - Auto-lock after 5 minutes of inactivity- **SHA-256 Authentication** - Salted password hashing for user accounts
 
-│   ├── SecureVaultSwing.java         # Main application & UI- **Show Password Toggle**: View passwords in login screen
+- **Clipboard Security** - Auto-clear copied passwords after 30 seconds- **Session Timeout** - Auto-lock after 5 minutes of inactivity
 
-│   ├── Database.java                 # SQLite CRUD operations
+- **Manual Lock** - Instant vault locking with `Ctrl+L`- **Clipboard Security** - Auto-clear copied passwords after 30 seconds
 
-│   ├── UserManager.java              # Authentication & user management- **Themes**: Light, Dark, and Custom color schemes│   ├── StrengthChecker.java        # Password strength checking
+- **Manual Lock** - Instant vault locking with Ctrl+L
 
-│   ├── LoginDialog.java              # Login/registration dialog
+### 📊 Password Management
 
-│   ├── CredentialDialog.java         # Add/edit credential dialog
+- **Password Generator** - Cryptographically secure random password generation### � Password Management
 
-│   ├── PasswordGeneratorDialog.java  # Password generator UI
+- **Strength Checker** - Real-time password strength analysis with visual feedback- **Password Generator** - Cryptographically secure random password generation
 
-│   ├── StrengthChecker.java          # Password strength algorithm### 🛠️ Password Tools│   ├── ThemeManager.java           # UI theme management> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- **Health Dashboard** - Overall security score and password health metrics- **Strength Checker** - Real-time password strength analysis with visual feedback
 
-│   └── StrengthCheckerDialog.java    # Animated strength display
+- **Expiry Tracking** - Password expiration dates with visual warnings- **Health Dashboard** - Overall security score and password health metrics
 
-├── lib/- **Password Generator**: Create strong passwords with customizable options
+- **Reused Password Detection** - Identify and flag reused passwords- **Expiry Tracking** - Password expiration dates with visual warnings
 
-│   ├── sqlite-jdbc-3.44.1.0.jar     # SQLite JDBC driver
+- **Reused Password Detection** - Identify and flag reused passwords
 
-│   ├── slf4j-api-2.0.9.jar          # SLF4J API  - Length control (8-32 characters)│   ├── ClipboardHelper.java        # Clipboard operations with auto-clear
+### 📂 Organization Features
 
-│   └── slf4j-simple-2.0.9.jar       # SLF4J implementation
+- **Multi-User Support** - Each user has their own encrypted vault### � Organization Features
 
-├── bin/                              # Compiled .class files  - Character types: uppercase, lowercase, digits, symbols
+- **Category System** - Organize credentials (Social Media, Banking, Email, Work, etc.)- **Multi-User Support** - Each user has their own encrypted vault
 
-├── securevault.db                    # SQLite database
+- **Favorites System** - Mark important credentials with star icons- **Category System** - Organize credentials (Social Media, Banking, Email, Work, etc.)
 
-├── run.sh                            # Launch script  - Live strength preview│   ├── CredentialDialog.java       # Add/Edit credential dialog## Dependency Management
+- **Smart Filters** - Filter by All, Favorites, or password strength (Weak/Medium/Strong)- **Favorites System** - Mark important credentials with star icons
 
-└── README.md                         # This file
+- **Multiple Sort Options** - Sort by Title, Username, Date, or Favorite status- **Smart Filters** - Filter by All, Favorites, or password strength (Weak/Medium/Strong)
 
-```  
+- **Real-Time Search** - Instant credential filtering as you type- **Multiple Sort Options** - Sort by Title, Username, Date, or Favorite status
 
+- **Notes Field** - Add detailed notes to any credential- **Real-Time Search** - Instant credential filtering as you type
 
+- **Notes Field** - Add detailed notes to any credential
 
-## 🚀 Getting Started- **Password Strength Checker**: Analyze password security│   ├── PasswordGeneratorDialog.java # Password generator UI
+### 🌐 Additional Features
 
+- **Website URLs** - Store and open associated websites directly from the app### 🌐 Additional Features
 
+- **Encrypted Attachments** - Securely store files up to 10MB- **Website URLs** - Store and open associated websites directly
 
-### Prerequisites  - Animated strength meter
+- **Import/Export** - Backup and restore with encrypted archives- **Encrypted Attachments** - Securely store files up to 10MB
 
-- **Java 25+** (OpenJDK or Oracle JDK)
+- **Dark/Light Themes** - Beautiful, modern UI with theme switching- **Import/Export** - Backup and restore with encrypted archives
 
-- **SQLite3** (for database management, optional)  - Real-time suggestions for improvement│   └── StrengthCheckerDialog.java  # Strength checker UI with animationsThe `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- **Keyboard Shortcuts** - Efficient workflow with hotkeys- **Dark/Light Themes** - Beautiful, modern UI with theme switching
 
-- **Linux/Unix** environment (tested on Kali Linux)
+- **Duplicate Prevention** - Automatic detection of duplicate credentials- **Keyboard Shortcuts** - Efficient workflow with hotkeys
 
-  - Show/hide password toggle
+- **Timestamps** - Track when credentials were created and modified- **Duplicate Prevention** - Automatic detection of duplicate credentials
 
-### Installation
+- **Timestamps** - Track when credentials were created and modified
 
-├── lib/
+---
 
-1. **Clone/Download** the project to your system
+---
 
-## Getting Started│   └── sqlite-jdbc-3.44.1.0.jar   # SQLite JDBC driver
+## 🚀 Quick Start
 
-2. **Verify Java Installation**
+## 📸 Screenshots
 
-   ```bash├── bin/                            # Compiled classes
+### Prerequisites
 
-   java --version
+_Coming soon - showing the beautiful UI, dashboard, and key features_
 
-   # Should show Java 25 or higher### Prerequisites└── securevault.db                  # SQLite database (created at runtime)
+- **Java 17 or higher** (OpenJDK or Oracle JDK recommended)
+
+- Linux, macOS, or Windows operating system---
+
+- Terminal/Command Prompt access
+
+## 🚀 Quick Start
+
+### Demo Credentials
+
+### Prerequisites
+
+On first launch, the application automatically creates a demo account with sample data:
+
+- **Java 17 or higher** (OpenJDK or Oracle JDK)
+
+- **Username:** `test`- Linux, macOS, or Windows operating system
+
+- **Password:** `12345`
+
+### Demo Credentials
+
+The demo account includes 8 sample credentials across different categories to help you explore all features.
+
+On first launch, the application creates a demo account with sample data:
+
+### One-Line Launch
+
+- **Username:** `test`
+
+```bash- **Password:** `12345`
+
+chmod +x run.sh && ./run.sh
+
+```The demo account includes 8 sample credentials across different categories to help you explore the features.
+
+
+
+That's it! The script will automatically:### One-Line Launch
+
+- Download required dependencies (SQLite JDBC, SLF4J) if missing
+
+- Compile the Java sources if needed```bash
+
+- Launch the applicationchmod +x run.sh && ./run.sh
+
+
+
+---   - Compile the Java sources if needed
+
+
+
+## 📦 Installation   - Include all required libraries
+
+
+
+### Option 1: Quick Run (Recommended)   - Launch the application# Launch SecureVault Pro# Launch SecureVault Pro
+
+
+
+1. **Clone the repository:**
+
+   ```bash
+
+   git clone https://github.com/yourusername/SecureVault-Pro.git### Manual Compilation (Optional)./run.sh./run.sh
+
+   cd SecureVault-Pro
 
    ```
 
-- Java 17 or higher```
 
-3. **Run the Application**
 
-   ```bash- Linux/Unix-based system (tested on Kali Linux)
+2. **Run the application:**If you prefer to compile manually:``````
+
+   ```bash
 
    chmod +x run.sh
 
-   ./run.sh## Features
+   ./run.sh
 
-   ```
-
-   ### Installation
-
-   The `run.sh` script automatically:
-
-   - Downloads required JAR dependencies if missing### ✅ Implemented
-
-   - Compiles all Java source files
-
-   - Launches the application with proper classpath1. Clone or extract the project to your system- **SQLite Database Persistence**: All credentials stored in local database
+   ``````bash
 
 
 
-### Manual Compilation (Alternative)- **Password Strength Meter**: 
+### Option 2: Manual Compilation# Create bin directory
 
 
 
-```bash2. Navigate to the project directory:  - Live 5-segment bar in table
-
-# Compile all source files
-
-javac -cp "lib/*:." -d bin src/*.java```bash  - Animated strength checker dialog
+If you prefer to compile manually:mkdir -p bin------
 
 
-
-# Run the applicationcd /home/abin/Documents/Secure_Valut/PRoejct  - Suggestions for improvement
-
-java -cp "lib/*:bin" SecureVaultSwing
-
-``````- **Password Generator**: Customizable length and character sets
-
-
-
-## 👤 Default Users & Login- **Clipboard Auto-Clear**: Copies passwords with automatic clearing after timeout
-
-
-
-The system comes with two pre-configured users:3. Make the run script executable:- **Theming**: Light, Dark, and Custom themes
-
-
-
-| Username | Password | Credentials |```bash- **Modular Architecture**: Clean separation of concerns
-
-|----------|----------|-------------|
-
-| **Abin** | Abin@2006 | 55 sample credentials |chmod +x run.sh
-
-| **Advaith** | Advaith@2006 | 29 sample credentials |
-
-```### Database Operations
-
-### First Time Login
-
-1. Launch the application- **Insert**: Add new credentials (Title, Username, Password)
-
-2. Enter username and password
-
-3. Click **Login** to access your vault### Running the Application- **Update**: Edit existing credentials
-
-4. Or click **Create User** to register a new account
-
-- **Delete**: Remove credentials from database
-
-## 📖 User Guide
-
-Simply run:- **Select**: Load all credentials on login
-
-### Managing Credentials
 
 ```bash
 
-#### Add New Credential
+# Create bin directory
 
-1. Click **Add** button in toolbar./run.sh## Compilation
+mkdir -p bin# Compile all sources
 
-2. Fill in the form:
 
-   - **Service**: Website/app name (e.g., "GitHub")```
 
-   - **Username**: Your username/email
+# Compile all sourcesjavac -Xlint:all -cp "lib/*:." -d bin src/*.java
 
-   - **Password**: Your password```bash
+javac -Xlint:all -cp "lib/*:." -d bin src/*.java
 
-   - **Category**: Optional grouping (e.g., "Social Media")
+## ✨ Key Features## ✨ Key Features
 
-3. Watch the live strength meter as you typeOr manually:javac -cp "lib/*:." -d bin src/*.java
+# Run the application
 
-4. Click **Save**
-
-```bash```
-
-#### Edit Credential
-
-1. Select a credential row in the tablejavac -cp "lib/*:." -d bin src/*.java
-
-2. Click **Edit** button
-
-3. Modify the fieldsjava -cp "lib/*:bin" SecureVaultSwing## Running
-
-4. Click **Save**
+java -cp "bin:lib/*" SecureVaultSwingEnhanced# Run the application
 
 ```
 
-#### Delete Credential
+java -cp "bin:lib/*" SecureVaultSwingEnhanced
+
+### Option 3: IDE Import
+
+```
+
+You can also import this project into your favorite Java IDE:
+
+- **IntelliJ IDEA**: Open as Maven/Gradle project or import from existing sources### 🔒 Security Features
+
+- **Eclipse**: Import as Java project and add lib/*.jar files to build path
+
+- **NetBeans**: Open project and configure libraries### Default Login Credentials
+
+
+
+For detailed platform-specific instructions, see [INSTALLATION.md](docs/INSTALLATION.md).- ✅ **AES-256-CBC Encryption** - Military-grade password encryption with PBKDF2 key derivation (100,000 iterations)
+
+
+
+---For testing purposes, the database includes a default user:
+
+
+
+## 💻 Usage- ✅ **SHA-256 Authentication** - Salted password hashing for user accounts#### 🌐 **Website Integration**
+
+
+
+### First Time Setup- **Username:** `Abin`
+
+
+
+1. **Launch the application** using one of the methods above- **Password:** `Abin@2006`- ✅ **Session Timeout** - Auto-locks after 5 minutes of inactivity
+
+2. **Login** with demo credentials (`test` / `12345`)
+
+3. **Explore** the 8 pre-loaded demo credentials
+
+4. **Create your own user** by clicking "Create User" in the login dialog
+
+⚠️ **Important:** Change this password or create your own user for production use!- ✅ **Secure Clipboard** - Auto-clear copied passwords after 30 seconds- Store website URLs with credentials
+
+### Basic Operations
+
+
+
+#### Adding a Credential
+
+1. Click **"Add"** button or press `Ctrl+N`---- ✅ **Manual Lock** - Instant vault locking (Ctrl+L)
+
+2. Fill in the details (Title, Username, Password)
+
+3. Choose a category from the dropdown
+
+4. Optionally add: notes, website URL, expiry date
+
+5. Click **"Save"**## ✨ Key Features- ✅ **Password Strength Analysis** - Real-time strength checking with visual indicators- "🌐 Open" button launches browser directly### 🎨 Theme Support- **Manual Lock Button** - Instant vault locking ✅
+
+
+
+#### Editing a Credential
+
+1. Select a credential from the table
+
+2. Click **"Edit"** button or press `Enter`### 🔐 Security Features
+
+3. Modify the details
+
+4. Click **"Save"**- **AES-256-CBC Encryption** - Military-grade password encryption
+
+
+
+#### Using Password Generator- **PBKDF2 Key Derivation** - 100,000 iterations for enhanced security### 💎 Password Management- Auto-prepends https:// if missing
+
+- Click **"Generate"** button in the Add/Edit dialog
+
+- Adjust length and character types- **SHA-256 Authentication** - Salted password hashing for user accounts
+
+- Click **"Copy"** to use the generated password
+
+- **Session Timeout** - Auto-locks after 5 minutes of inactivity- ⭐ **Favorites System** - Mark important credentials with golden stars
+
+#### Copying Credentials
+
+- **Username**: Select row and click "Copy Username"- **Secure Clipboard** - Auto-clears copied passwords after 30 seconds
+
+- **Password**: Select row and click "Copy Password" or press `Ctrl+Shift+C`
+
+- Clipboard auto-clears after 30 seconds for security- **Manual Lock** - Instant vault locking with Ctrl+L- 🔍 **Real-Time Search** - Instant filtering as you type (Ctrl+F)- Perfect for quick access to login pages- **Light Mode** - Clean purple theme with white backgrounds
+
+
+
+### Keyboard Shortcuts
+
+
+
+| Shortcut | Action |### 💎 Password Management- 🎯 **Smart Filters** - View all, favorites only, or filter by password strength (Weak/Medium/Strong)
+
+|----------|--------|
+
+| `Ctrl+N` | Add new credential |- ⭐ **Favorites System** - Mark important credentials
+
+| `Ctrl+F` | Focus search box |
+
+| `Ctrl+L` | Lock vault |- 🔍 **Real-Time Search** - Instant filtering (Ctrl+F)- 📊 **6 Sort Options** - Sort by title, username, created date, modified date, or favorites
+
+| `Ctrl+Shift+C` | Copy password |
+
+| `Delete` | Delete selected credential |- 🎯 **Smart Filters** - View by strength (Weak/Medium/Strong)
+
+| `Enter` | Edit selected credential |
+
+- 📊 **6 Sort Options** - Sort by title, username, dates, favorites- 📝 **Notes Field** - Add detailed notes to each credential
+
+### Security Best Practices
+
+- 📝 **Notes Field** - Add detailed notes to credentials
+
+1. **Use Strong Master Password** - Your master password protects everything
+
+2. **Enable Password Expiry** - Set 90-day expiry for sensitive accounts- 📅 **Password Expiry** - Track and manage password expiration- 👤 **Copy Username/Password** - Quick copying with separate buttons#### 📅 **Password Expiry Management**- **Dark Mode** - Comfortable blue theme with dark backgrounds- **SHA-256 Authentication** - Salted password hashing ✅
+
+3. **Check Health Dashboard** - Regularly review your password security score
+
+4. **Avoid Reused Passwords** - Use unique passwords for each account- 🌐 **Website URLs** - Quick launch with browser integration
+
+5. **Lock When Away** - Use `Ctrl+L` when leaving your computer
+
+6. **Regular Backups** - Export your vault regularly using Import/Export feature- 📅 **Timestamps** - Track when credentials were created and last modified
+
+
+
+---### 🆕 Advanced Features
+
+
+
+## 🔐 Security- **📂 Categories** - 7 default categories + custom category support- Set expiry dates for passwords
+
+
+
+### Encryption Details- **📎 Attachments** - Upload encrypted files (up to 10MB)
+
+
+
+- **Algorithm**: AES-256-CBC (Advanced Encryption Standard)- **📥 Import** - From Chrome, Firefox, Edge, Opera CSV exports### 🆕 Advanced Features (v3.0)
+
+- **Key Derivation**: PBKDF2 with SHA-256, 100,000 iterations
+
+- **Authentication**: SHA-256 with per-user salt- **📤 Export** - Encrypted ZIP archives with all data
+
+- **IV Generation**: Cryptographically secure random IV for each password
+
+- **📊 Health Dashboard** - Security score (0-100) and statistics- Default 90-day expiry for new credentials- **Gradient Headers** - Smooth purple-to-blue gradient banner
+
+### Security Measures
+
+- **🎨 Themes** - Beautiful Dark/Light mode with gradients
+
+1. **Passwords Never Stored in Plain Text** - All passwords are encrypted before storage
+
+2. **Memory Protection** - Encryption keys cleared from memory on logout#### 📂 Categories System
+
+3. **Session Management** - Automatic timeout after inactivity
+
+4. **Clipboard Security** - Automatic clearing of copied sensitive data### ⌨️ Keyboard Shortcuts
+
+5. **Database Security** - SQLite database stored locally with encrypted data
+
+- `Ctrl+N` - Add new credential- 7 default categories: Social Media, Banking, Email, Work, Shopping, Entertainment, Other- Visual warnings in table:
+
+### Threat Model
+
+- `Ctrl+F` - Focus search field
+
+SecureVault Pro protects against:
+
+- ✅ Unauthorized access to password database- `Ctrl+L` - Lock vault- Custom category support (add your own categories)
+
+- ✅ Password disclosure through clipboard monitoring
+
+- ✅ Session hijacking through auto-timeout- `Ctrl+Shift+C` - Copy password
+
+- ✅ Weak password usage through strength analysis
+
+- `Del` - Delete selected credential- Color-coded category badges in table view  - ⛔ **EXPIRED** (red) - Password has expired- **Hover Effects** - Interactive button highlighting
+
+SecureVault Pro does NOT protect against:
+
+- ❌ Keyloggers on compromised systems- `Enter` - Edit selected credential
+
+- ❌ Physical access to unlocked application
+
+- ❌ Weak master passwords chosen by users- Category dropdown in Add/Edit dialog
+
+- ❌ Operating system-level vulnerabilities
+
+---
+
+For more details, see [SECURITY.md](SECURITY.md).
+
+  - ⚠️ **X days** (amber) - Expiring within 7 days
+
+---
+
+## 📁 Project Structure
+
+## 📚 Documentation
+
+#### 🌐 Website Integration
+
+### Complete Documentation
+
+```
+
+- **[Installation Guide](docs/INSTALLATION.md)** - Detailed installation for all platforms
+
+- **[User Guide](docs/USER_GUIDE.md)** - Complete feature documentationPRoejct/- Website URL field for each credential  - Date (green) - Valid expiry date- **Color-Coded Strength** - Visual password strength indicators
+
+- **[Architecture](docs/ARCHITECTURE.md)** - Technical design and structure
+
+- **[Contributing Guide](CONTRIBUTING.md)** - How to contribute to the project├── src/                          # Java source files (15 files)
+
+- **[Security Policy](SECURITY.md)** - Security features and vulnerability reporting
+
+- **[Quick Reference](QUICKSTART.md)** - Handy quick start guide│   ├── SecureVaultSwingEnhanced.java    # Main application- Quick "Open in Browser" button (🌐) to launch URLs directly
+
+- **[Changelog](docs/CHANGELOG.md)** - Version history and updates
+
+│   ├── Database.java                     # Database operations
+
+### Project Structure
+
+│   ├── PasswordEncryption.java           # AES-256 encryption- Automatic URL validation- "📅 +90 Days" button for quick expiry setting
+
+```
+
+SecureVault-Pro/│   ├── UserManager.java                  # Authentication
+
+├── src/                          # Java source files
+
+│   ├── SecureVaultSwingEnhanced.java  # Main application class│   ├── CategoryManager.java              # Category management
+
+│   ├── Database.java             # Database operations
+
+│   ├── UserManager.java          # User authentication│   ├── AttachmentManager.java            # File attachments
+
+│   ├── PasswordEncryption.java   # AES encryption implementation
+
+│   ├── CategoryManager.java      # Category management│   ├── ImportExportManager.java          # Import/Export#### ⏰ Password Expiry Tracking### 💼 **Features**### 🔐 Security Features## FeaturesA modular, database-backed password manager with Swing GUI.Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+
+│   ├── AttachmentManager.java    # File attachment handling
+
+│   └── ...                       # Other supporting classes│   ├── HealthDashboard.java              # Security analysis
+
+├── lib/                          # Dependencies (JDBC, SLF4J)
+
+├── bin/                          # Compiled classes (auto-generated)│   └── ... (other UI and utility classes)- Set expiry dates for credentials
+
+├── docs/                         # Documentation files
+
+├── run.sh                        # Launch script│
+
+├── README.md                     # This file
+
+├── LICENSE                       # MIT License├── lib/                          # Dependencies- Visual expiry warnings:#### 📊 **Security Health Dashboard**
+
+└── .gitignore                    # Git ignore rules
+
+```│   ├── sqlite-jdbc-3.44.1.0.jar         # SQLite JDBC driver
+
+
+
+---│   ├── slf4j-api-2.0.9.jar              # Logging API  - 🔴 **Red** - Expired
+
+
+
+## 🤝 Contributing│   └── slf4j-simple-2.0.9.jar           # Logging implementation
+
+
+
+We welcome contributions from the community! Here's how you can help:│  - 🟡 **Amber** - Expiring within 30 days- **Overall Security Score** (0-100) with color coding## 🚀 Quick Start
+
+
+
+### Ways to Contribute├── docs/                         # Documentation
+
+
+
+- 🐛 **Report Bugs** - Open an issue with details and steps to reproduce│   ├── FEATURES.md                       # Detailed feature list  - 🟢 **Green** - Valid
+
+- 💡 **Suggest Features** - Share ideas for new features or improvements
+
+- 📖 **Improve Documentation** - Help make our docs clearer and more complete│   ├── CHANGELOG.md                      # Version history
+
+- 🔧 **Submit Pull Requests** - Fix bugs or implement new features
+
+│   ├── FIXES_APPLIED.md                  # Bug fixes log- Quick "+90 Days" button to set expiry date- Password strength distribution (Strong/Medium/Weak)
+
+### Getting Started
+
+│   ├── BUILD_STATUS.md                   # Build information
+
+1. **Fork** the repository
+
+2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)│   └── PROJECT_SUMMARY.md                # Project overview- Automatic expiry notifications in Health Dashboard
+
+3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
+
+4. **Push** to the branch (`git push origin feature/AmazingFeature`)│
+
+5. **Open** a Pull Request
+
+├── bin/                          # Compiled classes (auto-generated)- **Reused passwords** detection- Multi-user support with isolated vaults
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines including:
+
+- Code style and formatting├── securevault.db                # SQLite database (included for convenience)
+
+- Commit message conventions
+
+- Testing requirements├── run.sh                        # Launch script#### 📥 Import/Export Manager
+
+- Pull request process
+
+├── .gitignore                    # Git ignore rules
+
+---
+
+└── README.md                     # This file- **Import from:**- **Expired passwords** count
+
+## 📄 License
+
+```
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+  - CSV files (comma-separated)
+
+### What This Means
+
+---
+
+✅ **You CAN:**
+
+- Use this software for personal or commercial purposes  - Encrypted ZIP archives- **Expiring soon** warnings (within 7 days)### Prerequisites
+
+- Modify the source code
+
+- Distribute original or modified copies## 📚 Documentation
+
+- Use this in private projects
+
+  - Automatic field mapping
+
+❌ **You CANNOT:**
+
+- Hold the authors liable for any damages- **[FEATURES.md](docs/FEATURES.md)** - Complete feature list with technical details
+
+- Use the authors' names for endorsement without permission
+
+- **[CHANGELOG.md](docs/CHANGELOG.md)** - Version history and updates  - Duplicate detection and prevention- Credentials needing attention list
+
+---
+
+- **[FIXES_APPLIED.md](docs/FIXES_APPLIED.md)** - Bug fixes and improvements
+
+## 🙏 Acknowledgments
+
+- **[BUILD_STATUS.md](docs/BUILD_STATUS.md)** - Build verification and quality metrics- **Export to:**
+
+- **SQLite JDBC Driver** - Database connectivity
+
+- **SLF4J** - Logging framework- **[PROJECT_SUMMARY.md](docs/PROJECT_SUMMARY.md)** - Comprehensive project overview
+
+- **Java Swing** - GUI framework
+
+- **Community Contributors** - Thanks to everyone who has contributed!  - Encrypted ZIP archive containing:- Beautiful visual report with charts- Java 25 or higher- Add, edit, delete, view credentials- **Multi-User Authentication**: Secure login system with user isolation
+
+
+
+------
+
+
+
+## 📞 Support    - credentials.csv (all credential data)
+
+
+
+### Getting Help## 🔧 Technical Details
+
+
+
+- 📖 **Documentation** - Check our comprehensive docs in the `docs/` folder    - attachments/ folder (encrypted files)
+
+- 🐛 **Bug Reports** - Open an issue on GitHub
+
+- 💬 **Discussions** - Use GitHub Discussions for questions and ideas### Technology Stack
+
+- 🔒 **Security Issues** - See [SECURITY.md](SECURITY.md) for responsible disclosure
+
+- **Language:** Java 17+  - Organized and sorted structure
+
+### Project Status
+
+- **GUI Framework:** Swing
+
+🟢 **Active Development** - This project is actively maintained and accepting contributions.
+
+- **Database:** SQLite 3  - Secure password-protected archives#### 📤 **Import/Export**- Linux/macOS/Windows
+
+---
+
+- **Encryption:** AES-256-CBC, SHA-256, PBKDF2
+
+## 🗺️ Roadmap
+
+- **Dependencies:** sqlite-jdbc, slf4j
+
+### Planned Features
+
+
+
+- [ ] Browser extension integration
+
+- [ ] Mobile app companion (view-only)### Database Schema#### 📎 Encrypted Attachments- **Import from:**
+
+- [ ] Two-factor authentication support
+
+- [ ] Cloud sync (optional, encrypted)- `users` - User accounts with hashed passwords
+
+- [ ] Password breach detection
+
+- [ ] Biometric unlock support- `credentials` - Encrypted password storage- Upload files up to **10 MB** per credential
+
+- [ ] Auto-fill capabilities
+
+- [ ] Multiple vault support- `custom_categories` - User-defined categories
+
+
+
+---- `attachments` - Encrypted file storage- Encrypted storage in database as BLOBs  - Google Chrome CSV export- Password strength meter & analyzer
+
+
+
+## ⭐ Star History
+
+
+
+If you find this project useful, please consider giving it a star on GitHub! It helps others discover the project.### Security Implementation- Download/view attachments anytime
+
+
+
+---- **Password Encryption:** AES-256-CBC with PKCS5 padding
+
+
+
+<div align="center">- **Key Derivation:** PBKDF2 with SHA-256 (100,000 iterations)- Delete individual attachments  - Mozilla Firefox CSV export
+
+
+
+**Made with ❤️ for the open-source community**- **Authentication:** SHA-256 with 16-byte random salt
+
+
+
+[⬆ Back to Top](#-securevault-pro---password-manager)- **Session Management:** In-memory key with auto-clear- Attachment count tracking
+
+
+
+</div>
+
+
+---- Perfect for recovery codes, 2FA backup codes, IDs, documents  - Microsoft Edge CSV export### Running the Application
+
+
+
+## 🛠️ Development
+
+
+
+### Building from Source#### 📊 Health Dashboard  - Opera CSV export
+
+
+
+```bash- **Security Score** (0-100) calculated from:
+
+# Clean build
+
+rm -rf bin && mkdir bin  - Password strength distribution  - Generic CSV files- Secure password generator- **SHA-256 Hashing**: All user passwords are hashed with unique 16-byte salts
+
+
+
+# Compile with all warnings enabled  - Expiry status
+
+javac -Xlint:all -cp "lib/*:." -d bin src/*.java
+
+  - Duplicate password detection  - SecureVault encrypted archives
+
+# Verify compilation
+
+echo $?  # Should output: 0- **Visual Statistics:**
+
+```
+
+  - Total credentials count- **Export to:**```bash
+
+### Running Tests
+
+  - Weak/Medium/Strong password breakdown
+
+The application has been thoroughly tested with:
+
+- ✅ Zero compiler warnings  - Expired/Expiring soon alerts  - Encrypted ZIP archive with:
+
+- ✅ Clean code quality checks
+
+- ✅ Security audit passed- **Action Items:**
+
+- ✅ UI/UX testing completed
+
+  - List of credentials needing attention    - credentials.csv (all data)# Make the script executable (first time only)- Duplicate prevention (title + username)
+
+### Code Quality
+
+- **Total Lines:** ~3,900 lines  - Direct links to update weak/expired passwords
+
+- **Source Files:** 15 Java files
+
+- **Warnings:** 0 (with `-Xlint:all`)    - attachments/ folder (encrypted files)
+
+- **Dependencies:** 3 JAR files
+
+### 🎨 User Interface
+
+---
+
+  - Organized and sorted structurechmod +x run.sh
+
+## 🤝 Contributing
+
+#### Enhanced Table View
+
+Contributions are welcome! Please:
+
+- **8 Columns**: ⭐ Favorite | Title | Username | Password | Category | Strength | Expiry | Modified- Smart format detection
+
+1. Fork the repository
+
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)- Color-coded categories with subtle backgrounds
+
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+
+4. Push to the branch (`git push origin feature/amazing-feature`)- Visual expiry warnings (red/amber/green)- Duplicate prevention during import- One-click copy to clipboard- **Password Masking**: Credentials displayed with asterisks (••••••)
+
+5. Open a Pull Request
+
+- Password strength bars (5-segment visual indicator)
+
+---
+
+- Golden star favorites
+
+## 📝 License
+
+- Alternating row colors for better readability
+
+This project is provided for personal and educational use. Please add a LICENSE file if you plan to distribute this software.
+
+- Hover effects on rows#### 📎 **Encrypted Attachments**# Launch SecureVault Pro
+
+---
+
+
+
+## 🙏 Acknowledgments
+
+#### Toolbar (13 Buttons)- Upload files up to **10 MB** per credential
+
+- SQLite team for the excellent embedded database
+
+- SLF4J team for the logging framework- **➕ Add** - Create new credential (Ctrl+N)
+
+- Java Swing community for UI components
+
+- **✏️ Edit** - Modify selected credential- Encrypted storage in database as BLOBs./run.sh- Dark/Light theme support
+
+---
+
+- **🗑️ Delete** - Remove credential (Del)
+
+## 📞 Support
+
+- **🔑 Copy Pass** - Copy password to clipboard (Ctrl+Shift+C)- Download/view attachments anytime
+
+If you encounter any issues or have questions:
+
+- Check the [FEATURES.md](docs/FEATURES.md) documentation- **👤 Copy User** - Copy username to clipboard
+
+- Review [FIXES_APPLIED.md](docs/FIXES_APPLIED.md) for known issues
+
+- Open an issue on the GitHub repository- **⭐ Favorite** - Toggle favorite status- Delete individual attachments```
+
+
+
+---- **🎲 Generate** - Random password generator
+
+
+
+## 🗺️ Roadmap- **🔍 Strength** - Check password strength- Attachment count tracking
+
+
+
+Future enhancements being considered:- **📥 Import** - Import credentials from CSV/ZIP
+
+- [ ] Cloud sync support
+
+- [ ] Browser extension integration- **📤 Export** - Export to encrypted archive- Perfect for recovery codes, IDs, documents- **Secure Password Generation**: Cryptographically secure random password generator### 🔐 Multi-User System
+
+- [ ] Mobile companion app
+
+- [ ] Biometric authentication- **📊 Health** - View security dashboard
+
+- [ ] Password breach checking
+
+- [ ] Two-factor authentication- **🔒 Lock** - Lock vault (Ctrl+L)
+
+
+
+---- **🎨 Theme** - Toggle dark/light mode
+
+
+
+**Made with ❤️ by Abin | Version 3.0 | Last Updated: November 4, 2025**- **🚪 Logout** - Logout and exit## 🎨 User Interface### Default Login
+
+
+
+
+#### Enhanced Dialog (9 Fields)
+
+- **Title** - Credential name
+
+- **Username** - Account username### Enhanced Table View- **Username**: `Abin`---
+
+- **Password** - With "👁 Show/Hide" and "🎲 Generate" buttons
+
+- **Category** - Dropdown with custom input support- **8 Columns**: ⭐ Favorite | Title | Username | Password | Category | Strength | Expiry | Modified
+
+- **Website** - URL field with "🌐 Open" button
+
+- **Expiry** - Date field with "📅 +90 Days" button- Color-coded categories with subtle backgrounds- **Password**: `Abin@2006`
+
+- **Notes** - Multi-line text area for detailed information
+
+- **Attachments** - Upload and manage encrypted files- Visual expiry warnings (red/amber/green)
+
+- **Favorite** - Checkbox to mark as favorite
+
+- Password strength bars (5-bar visual indicator)- **Password Strength Meter**: Real-time visual strength analysis with animated UI
+
+#### Theme Support
+
+- 🌙 **Dark Mode** - Professional dark theme with blue accents- Golden star favorites
+
+- ☀️ **Light Mode** - Clean light theme with gradient headers
+
+- Samsung-inspired gradients and modern design- Alternating row colors## 📁 Project Structure
+
+- Smooth theme transitions
+
+- Hover effects on rows
+
+### ⌨️ Keyboard Shortcuts
+
+- **Ctrl+N** - Add new credential## 🚀 Quick Start
+
+- **Ctrl+F** - Focus search field
+
+- **Ctrl+L** - Lock vault### Toolbar (13 Buttons)
+
+- **Ctrl+Shift+C** - Copy password
+
+- **Del** - Delete selected credential- **➕ Add** - Create new credential (Ctrl+N)```
+
+- **Enter** - Edit selected credential
+
+- **✏️ Edit** - Modify selected credential
+
+---
+
+- **🗑️ Delete** - Remove credential (Del)PRoejct/- **User Authentication**: Secure SHA-256 hashed passwords with salt
+
+## 📁 Project Structure
+
+- **🔑 Copy Pass** - Copy password to clipboard (Ctrl+Shift+C)
+
+```
+
+PRoejct/- **👤 Copy User** - Copy username to clipboard├── src/
+
+├── src/
+
+│   ├── SecureVaultSwingEnhanced.java  # Main application (1100+ lines)- **⭐ Favorite** - Toggle favorite status
+
+│   ├── EnhancedCredentialDialog.java  # Add/Edit dialog
+
+│   ├── Database.java                  # Database operations with encryption- **🎲 Generate** - Random password generator│   ├── SecureVaultSwingEnhanced.java  # Main application (955 lines)### **Run Application**
+
+│   ├── DatabaseUpgrade.java           # Schema migration utility
+
+│   ├── PasswordEncryption.java        # AES-256 encryption- **🔍 Strength** - Check password strength
+
+│   ├── UserManager.java               # User authentication
+
+│   ├── LoginDialog.java               # Login UI- **📥 Import** - Import credentials from CSV/ZIP│   ├── EnhancedCredentialDialog.java  # Add/Edit dialog with notes
+
+│   ├── PasswordGeneratorDialog.java   # Password generator
+
+│   ├── StrengthChecker.java           # Password strength analysis- **📤 Export** - Export to encrypted archive
+
+│   ├── StrengthCheckerDialog.java     # Strength checker UI
+
+│   ├── CategoryManager.java           # Category management- **📊 Health** - View security dashboard│   ├── Database.java                  # Database operations with encryption```bash### 🎨 User Interface
+
+│   ├── AttachmentManager.java         # File attachment handling
+
+│   ├── HealthDashboard.java           # Security score calculator- **🔒 Lock** - Lock vault (Ctrl+L)
+
+│   ├── HealthDashboardDialog.java     # Health dashboard UI
+
+│   └── ImportExportManager.java       # CSV/ZIP import/export- **🎨 Theme** - Toggle dark/light mode│   ├── PasswordEncryption.java        # AES-256 encryption
+
+├── lib/
+
+│   └── sqlite-jdbc-3.47.0.0.jar       # SQLite JDBC driver- **🚪 Logout** - Logout and exit
+
+├── bin/                                # Compiled classes
+
+├── securevault.db                      # SQLite database│   ├── UserManager.java               # User authenticationcd /home/abin/Documents/Secure_Valut/PRoejct
+
+├── run.sh                              # Launch script
+
+├── README.md                           # This file### Enhanced Dialog (9 Fields)
+
+├── FEATURES.md                         # Detailed feature documentation
+
+└── FIXES_APPLIED.md                    # Development changelog- **Title** - Credential name│   ├── LoginDialog.java               # Login UI
+
+```
+
+- **Username** - Account username
+
+---
+
+- **Password** - With "👁 Show/Hide" and "🎲 Generate" buttons│   ├── PasswordGeneratorDialog.java   # Password generator./run.sh- **Modern Design**: Clean, intuitive Java Swing interface- **Multiple Users**: Each user has a separate password vault## Project Structure## Folder Structure
+
+## 🔧 Technical Details
+
+- **Category** - Dropdown with custom input support
+
+### Database Schema
+
+- **users** - User accounts with hashed passwords- **Website** - URL field with "🌐 Open" button│   ├── StrengthChecker.java           # Password strength analysis
+
+- **credentials** - Encrypted password storage with categories, expiry, timestamps
+
+- **custom_categories** - User-defined categories- **Expiry** - Date field with "📅 +90 Days" button
+
+- **attachments** - Encrypted file storage (BLOB)
+
+- **Notes** - Multi-line notes (4 rows)│   └── StrengthCheckerDialog.java     # Strength checker UI```
+
+### Security Implementation
+
+- **Encryption**: AES-256-CBC with PKCS5 padding- **Favorite** - ⭐ checkbox
+
+- **Key Derivation**: PBKDF2WithHmacSHA256 (100,000 iterations)
+
+- **Authentication**: SHA-256 with 16-byte random salt- **Attachments** - (Manage after saving)├── lib/
+
+- **Session Management**: In-memory SecretKey cleared on logout/timeout
+
+- **Clipboard Security**: Automatic clipboard clearing after 30 seconds
+
+
+
+### Requirements## 📊 Technical Details│   ├── sqlite-jdbc-3.44.1.0.jar       # SQLite driver- **Dual Theme Support**: Light and Dark themes with proper contrast
+
+- **Java**: JDK 25 or higher
+
+- **Operating System**: Linux, macOS, Windows
+
+- **Dependencies**: SQLite JDBC 3.47.0.0 (included in lib/)
+
+### Database Schema│   ├── slf4j-api-2.0.9.jar            # Logging API
+
+---
+
+```sql
+
+## 📖 Usage Guide
+
+credentials (│   └── slf4j-simple-2.0.9.jar         # Logging implementationOr manually:
+
+### First Time Setup
+
+1. Launch the application using `./run.sh`    id, user_id, title, username, 
+
+2. Login with default credentials (Abin / Abin@2006)
+
+3. Start adding your credentials!    password [encrypted], is_favorite,├── bin/                                # Compiled classes
+
+
+
+### Adding a Credential    notes, category, website_url,
+
+1. Click **➕ Add** button or press **Ctrl+N**
+
+2. Fill in the required fields (Title, Username, Password)    expiry_date, created_date, modified_date,├── securevault.db                      # SQLite database (encrypted passwords)```bash- **Interactive Table**: Sortable credential table with visual strength indicators- **Default User**: Pre-configured user `Abin` with password `Abin@2006`
+
+3. Optionally add:
+
+   - Category    last_password_change
+
+   - Website URL
+
+   - Expiry date (or use +90 Days button))├── run.sh                              # Launch script
+
+   - Notes
+
+   - Attachments
+
+4. Click **Save**
+
+custom_categories (└── README.md                           # This filejavac -cp "lib/*:." -d bin src/*.java
+
+### Using Categories
+
+- Select from 7 default categories or create custom ones    id, user_id, category_name, color
+
+- Categories are color-coded in the table view
+
+- Filter credentials by category using the filter dropdown)```
+
+
+
+### Managing Expiry Dates
+
+- Set expiry dates to track password age
+
+- Use the "+90 Days" button for quick 3-month expiryattachments (java -cp "lib/*:bin" SecureVaultSwing- **Context Menu**: Right-click menu for quick actions
+
+- Visual indicators show expiry status (red/amber/green)
+
+- Health Dashboard shows expired and expiring passwords    id, credential_id, filename,
+
+
+
+### Import/Export    file_data [encrypted BLOB], file_size,## 🎯 Usage Guide
+
+- **Import**: Tools → Import, select CSV or ZIP file
+
+- **Export**: Tools → Export, creates encrypted ZIP with all data    encrypted, upload_date
+
+- Duplicate detection prevents importing existing credentials
+
+)```
+
+### Health Dashboard
+
+- Click **📊 Health** button to view security overview```
+
+- Shows security score (0-100)
+
+- Lists credentials needing attention:### Main Toolbar (11 Buttons)
+
+  - Weak passwords
+
+  - Expired passwords### Architecture
+
+  - Expiring soon passwords
+
+- Click any item to edit it directly- **Java 25** with Swing GUI1. **➕ Add** - Create new credential- **Live Strength Feedback**: Real-time password strength visualization- **Create New Users**: Easy user registration from login screen
+
+
+
+### Attachments- **SQLite** database with JDBC driver
+
+- In Add/Edit dialog, click "Upload Attachment" button
+
+- Select files up to 10 MB- **AES-256-CBC** for password encryption2. **✏️ Edit** - Modify selected credential
+
+- Files are encrypted and stored in database
+
+- Download or delete attachments as needed- **PBKDF2** key derivation (100,000 iterations)
+
+
+
+---- **SHA-256** for user authentication3. **🗑️ Delete** - Remove selected credential### **Default Login**
+
+
+
+## 🛠️ Development- **15 Source Files** (~3,200 lines of code)
+
+
+
+### Building from Source4. **📋 Copy Password** - Copy password to clipboard (auto-clears in 30s)
+
+```bash
+
+# Compile all Java files### New Classes (v3.0)
+
+javac -cp "lib/*:." -d bin src/*.java
+
+1. `DatabaseUpgrade.java` - Schema migration5. **👤 Copy Username** - Copy username to clipboard- **Username**: `Abin`
+
+# Run the application
+
+java -cp "lib/*:bin" SecureVaultSwingEnhanced2. `CategoryManager.java` - Category management
+
+```
+
+3. `AttachmentManager.java` - File handling6. **⭐ Favorite** - Toggle favorite status (golden star)
+
+### Running with Script
+
+```bash4. `HealthDashboard.java` - Security analysis
+
+./run.sh
+
+```5. `HealthDashboardDialog.java` - Visual report7. **🎲 Generate** - Open random password generator- **Password**: `Abin@2006`
+
+
+
+---6. `ImportExportManager.java` - Import/Export
+
+
+
+## 🐛 Known Issues & Limitations8. **📊 Strength** - Check password strength
+
+
+
+- Maximum attachment size: 10 MB per file## ⌨️ Keyboard Shortcuts
+
+- Session timeout: Fixed at 5 minutes
+
+- Single database file (no cloud sync)9. **🔒 Lock** - Lock vault immediately### 💼 Credential Management- **Logout**: Switch between users without closing the application
+
+- Platform-dependent URL opening behavior
+
+- **Ctrl+F** - Focus search box
+
+---
+
+- **Ctrl+N** - Add new credential10. **🎨 Theme** - Toggle light/dark mode
+
+## 📝 Changelog
+
+- **Ctrl+Shift+C** - Copy password
+
+### Version 3.0 (October 2025)
+
+- ✅ Added Categories system with 7 defaults + custom support- **Ctrl+L** - Lock vault11. **🚪 Logout** - Logout and return to login screen---
+
+- ✅ Added Website URL field with browser integration
+
+- ✅ Added Password Expiry tracking with visual indicators- **Delete** - Delete selected credential
+
+- ✅ Added Import/Export Manager (CSV/ZIP)
+
+- ✅ Added Encrypted Attachments (up to 10 MB)- **Enter** - Edit selected credential
+
+- ✅ Added Health Dashboard with security scoring
+
+- ✅ Enhanced table view with 8 columns- **Escape** - Cancel/Close dialog
+
+- ✅ Improved UI with color-coded categories
+
+- ✅ Fixed all compiler warnings### Search & Filter Panel- **Add/Edit/Delete**: Full CRUD operations for credentials
+
+- ✅ Code cleanup and optimization
+
+## 📁 Project Structure
+
+### Version 2.0
+
+- Added Dark/Light theme support- **Search Box** - Type to filter credentials in real-time
+
+- Added Favorites system
+
+- Added Password strength analysis```
+
+- Enhanced search and filter capabilities
+
+- Added keyboard shortcutsSecureVault/- **Filter Dropdown** - All | Favorites | Weak | Medium | Strong passwords## 📖 Usage
+
+
+
+### Version 1.0├── src/                                # Source code
+
+- Initial release
+
+- Basic password management│   ├── SecureVaultSwingEnhanced.java  # Main app (1157 lines)- **Sort Dropdown** - Sort by title, username, created date, modified date, favorites, or last modified
+
+- AES-256 encryption
+
+- Multi-user support│   ├── EnhancedCredentialDialog.java  # Add/Edit dialog
+
+
+
+---│   ├── HealthDashboardDialog.java     # Security report UI- **Copy to Clipboard**: One-click copy for passwords and usernames```The workspace contains two folders by default, where:
+
+
+
+## 📄 License│   ├── Database.java                  # Database operations
+
+
+
+This project is for personal use only. All rights reserved.│   ├── DatabaseUpgrade.java           # Schema migration### Keyboard Shortcuts
+
+
+
+---│   ├── CategoryManager.java           # Category handling
+
+
+
+## 👤 Author│   ├── AttachmentManager.java         # File attachments- **Ctrl+F** - Focus search box| Action | Steps |
+
+
+
+**Abin**│   ├── HealthDashboard.java           # Security analysis
+
+- Built with ❤️ using Java Swing
+
+- Secure by design, beautiful by choice│   ├── ImportExportManager.java       # Import/Export- **Ctrl+N** - Add new credential
+
+
+
+---│   ├── PasswordEncryption.java        # AES-256 encryption
+
+
+
+## 🙏 Acknowledgments│   ├── PasswordGeneratorDialog.java   # Password generator- **Delete** - Delete selected credential|--------|-------|- **Password Generator**: Customizable length and character sets### 🔑 Password Management
+
+
+
+- SQLite JDBC Driver by Xerial│   ├── UserManager.java               # User authentication
+
+- Samsung UI inspiration for gradient headers
+
+- Java Swing community for UI patterns│   ├── LoginDialog.java               # Login UI- **Enter** - Edit selected credential
+
+
+
+---│   ├── StrengthChecker.java           # Password strength
+
+
+
+**Stay Secure! 🔐**│   └── StrengthCheckerDialog.java     # Strength UI| **Add Password** | Click "Add" → Enter title, username, password → OK |
+
+
+├── lib/                                # Dependencies
+
+│   ├── sqlite-jdbc-3.44.1.0.jar       # SQLite driver## 🔐 Security Implementation
+
+│   ├── slf4j-api-2.0.9.jar            # Logging API
+
+│   └── slf4j-simple-2.0.9.jar         # Logging impl| **Copy Password** | Select row → "Copy Password" (auto-clears in 30s) |- **Strength Checker**: Detailed password analysis with recommendations
+
+├── bin/                                # Compiled classes
+
+├── securevault.db                      # SQLite database### Password Encryption
+
+├── run.sh                              # Launch script
+
+├── README.md                           # This file- **Algorithm**: AES-256-CBC| **Edit Password** | Select row → "Edit" → Modify → OK |
+
+└── FEATURES.md                         # Detailed features
+
+- **Key Derivation**: PBKDF2WithHmacSHA256
+
+Total: 15 source files, ~3,200 lines of code
+
+```- **Iterations**: 100,000| **Delete Password** | Select row → "Delete" → Confirm |- **Add/Edit/Delete** credentials with title, username, and passwordPRoejct/
+
+
+
+## 🛠️ Development- **Salt**: Unique 16-byte random salt per user
+
+
+
+### Compile- **IV**: Random 16-byte initialization vector per password| **Lock Vault** | Click "🔒 Lock" button (top-right) |
+
+```bash
+
+javac -cp "lib/*:." -d bin src/*.java
+
+```
+
+### User Authentication| **Change Theme** | Click "Theme" button |## 🛠️ Technical Stack
+
+### Run
+
+```bash- **Hashing**: SHA-256
+
+java -cp "lib/*:bin" SecureVaultSwingEnhanced
+
+```- **Salt**: Unique 16-byte random salt per user| **Generate Password** | Click "Generate" in credential dialog |
+
+
+
+### Or use the script- **Storage**: Only hashed passwords stored, never plaintext
+
+```bash
+
+./run.sh- **Copy to Clipboard** with auto-clear (12 seconds for security)
+
+```
+
+### Session Management
+
+## 🔒 Security Best Practices
+
+- **Timeout**: 5 minutes of inactivity---
+
+1. ✅ Use a **strong master password** (min 12 characters)
+
+2. ✅ Set **expiry dates** for important passwords- **Lock Button**: Instant manual locking
+
+3. ✅ Use the **password generator** for new accounts
+
+4. ✅ Check **Health Dashboard** regularly- **Clipboard Security**: Auto-clear after 30 seconds| Component | Technology |
+
+5. ✅ Update **weak or reused** passwords
+
+6. ✅ **Export backups** regularly
+
+7. ✅ **Lock vault** when stepping away
+
+8. ✅ Never share your master password## 📊 Database Schema## 🔐 Security Features
+
+
+
+## 📈 Statistics
+
+
+
+- **Total Features**: 40+ features### users table|-----------|-----------|- **Right-click menu** for quick password copy├── src/- `src`: the folder to maintain sources
+
+- **Lines of Code**: ~3,200 lines
+
+- **New Features (v3.0)**: 6 major additions- `id` - Primary key
+
+- **New Code**: ~1,100 lines
+
+- **Database Tables**: 4 tables- `username` - Unique username### **Encryption**
+
+- **Security**: Triple-layered (AES-256 + SHA-256 + PBKDF2)
+
+- `password` - SHA-256 hashed password
+
+## 🎯 Use Cases
+
+- `salt` - Random 16-byte salt (hex encoded)- **Algorithm**: AES-256-CBC| **Language** | Java 25 (with preview features) |
+
+### Personal Use
+
+- Store all your passwords securely
+
+- Organize by categories
+
+- Track password expiry### credentials table- **Key Derivation**: PBKDF2 (100,000 iterations)
+
+- Store recovery codes as attachments
+
+- `id` - Primary key
+
+### Work/Business
+
+- Organize work credentials- `user_id` - Foreign key to users table- **Storage**: Base64 encoded ciphertext in database| **GUI Framework** | Java Swing |- **Persistent Storage** in SQLite database
+
+- Track password changes
+
+- Export reports for compliance- `title` - Credential title
+
+- Share credentials securely (export feature)
+
+- `username` - Account username- **Protection**: Database file useless without user password
+
+### Migration
+
+- Import from Chrome, Firefox, Edge, Opera- `password` - AES-256 encrypted password
+
+- Export to encrypted backups
+
+- Transfer between devices- `is_favorite` - Boolean (0 or 1)| **Database** | SQLite 3 |
+
+
+
+## 📋 Requirements- `notes` - Optional text notes
+
+
+
+- **Java**: Version 25 or higher- `created_date` - ISO 8601 timestamp### **Session Management**
+
+- **OS**: Linux, macOS, Windows
+
+- **RAM**: 512 MB minimum- `modified_date` - ISO 8601 timestamp
+
+- **Disk**: 50 MB for app + database
+
+- Auto-locks after 5 minutes of inactivity| **JDBC Driver** | sqlite-jdbc-3.44.1.0.jar |│   ├── SecureVaultSwing.java       # Main UI application- `lib`: the folder to maintain dependencies
+
+## 📄 License
+
+## 🎨 UI Design
+
+This project is for **personal use and educational purposes**.
+
+- Manual lock button available
+
+## 👤 Author
+
+### Color Scheme
+
+Created by **Abin** - A secure password manager with beautiful UI and advanced features.
+
+- **Light Mode**: Purple (#6554C0) primary with white backgrounds- Encryption keys cleared on logout/lock| **Logging** | SLF4J 2.0.9 |
+
+---
+
+- **Dark Mode**: Blue (#5865F2) primary with dark backgrounds
+
+## 🎉 What's New in v3.0
+
+- **Favorites**: Golden (#FFC107) stars- Activity tracking (mouse, keyboard)
+
+### ✨ Major Features Added
+
+1. **📂 Categories** - 7 defaults + custom- **Gradient**: Purple to blue smooth gradient
+
+2. **🌐 Website URLs** - Open in browser
+
+3. **📅 Password Expiry** - Visual warnings| **Security** | java.security.MessageDigest (SHA-256) |### 🎨 User Interface
+
+4. **📊 Health Dashboard** - Security analysis
+
+5. **📤 Import/Export** - Multiple formats### Visual Elements
+
+6. **📎 Attachments** - Encrypted files
+
+- Gradient header banner (60px height)### **Clipboard Security**
+
+### 🎨 UI Enhancements
+
+- Enhanced table with Category and Expiry columns- Alternating row colors in table
+
+- Color-coded category badges
+
+- Visual expiry warnings (red/amber/green)- Hover effects on buttons (20% brightness increase)- Passwords auto-clear after 30 seconds| **Build Tool** | javac (manual compilation) |
+
+- Beautiful Health Dashboard dialog
+
+- 13 toolbar buttons (was 11)- Color-coded password strength bars
+
+- 9-field Add/Edit dialog (was 5)
+
+- Modern rounded buttons with emoji icons- Usernames don't auto-clear (less sensitive)
+
+### 🔧 Technical Improvements
+
+- Database schema upgraded (4 new columns)
+
+- 6 new classes added
+
+- Import/Export functionality## 🛠️ Development- Smart clearing (won't interfere with other apps)- **Clean Modern Design** with themed interface│   ├── Database.java                # SQLite database handler (CRUD operations)
+
+- Attachment encryption
+
+- NULL value handling
+
+- Enhanced error messages
+
+### Compilation
+
+---
+
+```bash
+
+**Version**: 3.0 - Ultimate Edition  
+
+**Last Updated**: October 29, 2025  javac -cp "lib/*:." -d bin src/*.java---## 📁 Project Structure
+
+**Status**: Production Ready ✅  
+
+**Total Development Time**: Full-stack implementation completed  ```
+
+**Code Quality**: Professional, documented, optimized
+
+
+
+🔐 **Stay Secure!**
+
+### Manual Execution
+
+```bash## 📊 Project Status- **Password Strength Meter**: 5-segment visual bars showing strength
+
+java -cp "lib/*:bin" SecureVaultSwingEnhanced
+
+```
+
+
+
+## 📝 Notes**Version**: 1.0.0  ```
+
+
+
+- All passwords are encrypted using AES-256 before storage**Security Score**: 75/100  
+
+- Session automatically locks after 5 minutes of inactivity
+
+- Copied passwords are automatically cleared from clipboard after 30 seconds**Phase**: 1 of 7 Complete ✅PRoejct/- **Live Strength Indicator**: Real-time strength check while typing│   ├── PasswordGenerator.java      # Password generation utilityMeanwhile, the compiled output files will be generated in the `bin` folder by default.
+
+- Duplicate credentials (same title + username) are prevented
+
+- Database file is stored in the project root directory
+
+- Compiled classes are stored in the `bin/` directory
+
+- [x] Phase 1: Critical Security (Encryption, session, clipboard)├── src/
+
+## 🔒 Security Best Practices
+
+- [ ] Phase 2: Build System (Maven, installers)
+
+1. **Strong Master Password** - Use a strong password for your user account
+
+2. **Regular Updates** - Keep your credentials updated- [ ] Phase 3: Testing (Unit tests, CI/CD)│   ├── SecureVaultSwing.java         # Main application & UI- **Show Password Toggle**: View passwords in login screen
+
+3. **Use Password Generator** - Generate strong random passwords
+
+4. **Check Password Strength** - Use the strength checker for existing passwords- [ ] Phase 4: Enhanced Features
+
+5. **Lock When Away** - Always lock the vault when stepping away
+
+- [ ] Phase 5: Advanced Security (2FA)│   ├── Database.java                 # SQLite CRUD operations
+
+## 📄 License
+
+- [ ] Phase 6: Distribution
+
+This project is for personal use and educational purposes.
+
+- [ ] Phase 7: Legal & Compliance│   ├── UserManager.java              # Authentication & user management- **Themes**: Light, Dark, and Custom color schemes│   ├── StrengthChecker.java        # Password strength checking
+
+## 👤 Author
+
+
+
+Created by Abin - A secure password manager with beautiful UI and advanced features.
+
+---│   ├── LoginDialog.java              # Login/registration dialog
+
+---
+
+
+
+**Version**: 2.0 Enhanced Edition  
+
+**Last Updated**: October 2025  ## 📁 Project Structure│   ├── CredentialDialog.java         # Add/edit credential dialog
+
+**Status**: Production Ready ✅
+
+
+
+```│   ├── PasswordGeneratorDialog.java  # Password generator UI
+
+SecureVault/
+
+├── src/                    # Java source code (10 classes)│   ├── StrengthChecker.java          # Password strength algorithm### 🛠️ Password Tools│   ├── ThemeManager.java           # UI theme management> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+
+├── lib/                    # Dependencies (SQLite JDBC, SLF4J)
+
+├── bin/                    # Compiled classes│   └── StrengthCheckerDialog.java    # Animated strength display
+
+├── docs/                   # Documentation
+
+│   ├── phase1/            # Phase 1 implementation docs├── lib/- **Password Generator**: Create strong passwords with customizable options
+
+│   └── archive/           # Archived documentation
+
+├── expppp/                # Code explanations│   ├── sqlite-jdbc-3.44.1.0.jar     # SQLite JDBC driver
+
+├── securevault.db         # Main database (encrypted)
+
+└── run.sh                 # Launch script│   ├── slf4j-api-2.0.9.jar          # SLF4J API  - Length control (8-32 characters)│   ├── ClipboardHelper.java        # Clipboard operations with auto-clear
+
+```
+
+│   └── slf4j-simple-2.0.9.jar       # SLF4J implementation
+
+---
+
+├── bin/                              # Compiled .class files  - Character types: uppercase, lowercase, digits, symbols
+
+## 🔄 Migration (Existing Users)
+
+├── securevault.db                    # SQLite database
+
+If you have plain-text passwords (before encryption was added):
+
+├── run.sh                            # Launch script  - Live strength preview│   ├── CredentialDialog.java       # Add/Edit credential dialog## Dependency Management
+
+```bash
+
+java -cp "lib/*:bin" DatabaseMigration└── README.md                         # This file
+
+```
+
+```  
+
+Follow prompts to enter password for each user. See `docs/phase1/MIGRATION_GUIDE.md` for details.
+
+
+
+---
+
+## 🚀 Getting Started- **Password Strength Checker**: Analyze password security│   ├── PasswordGeneratorDialog.java # Password generator UI
+
+## 📚 Documentation
+
+
+
+- **README.md** - This file (quick start)
+
+- **PRODUCTION_ROADMAP.md** - 7-phase production plan### Prerequisites  - Animated strength meter
+
+- **FUTURE_ENHANCEMENTS.md** - Planned features (20+ enhancements)
+
+- **PROJECT_ARCHITECTURE_AND_METHODOLOGY.md** - Architecture details- **Java 25+** (OpenJDK or Oracle JDK)
+
+- **docs/phase1/** - Phase 1 implementation documentation
+
+- **expppp/** - Line-by-line code explanations- **SQLite3** (for database management, optional)  - Real-time suggestions for improvement│   └── StrengthCheckerDialog.java  # Strength checker UI with animationsThe `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+
+
+---- **Linux/Unix** environment (tested on Kali Linux)
+
+
+
+## 🛠️ Technical Details  - Show/hide password toggle
+
+
+
+### **Dependencies**### Installation
+
+- Java 21+
+
+- SQLite JDBC 3.44.1.0├── lib/
+
+- SLF4J 2.0.9
+
+1. **Clone/Download** the project to your system
+
+### **Database**
+
+```sql## Getting Started│   └── sqlite-jdbc-3.44.1.0.jar   # SQLite JDBC driver
+
+users (id, username, password_hash, salt, created_at)
+
+credentials (id, user_id, title, username, password)2. **Verify Java Installation**
+
+```
+
+   ```bash├── bin/                            # Compiled classes
+
+### **Encryption Specs**
+
+- AES/CBC/PKCS5Padding, 256-bit key   java --version
+
+- PBKDF2WithHmacSHA256, 100,000 iterations
+
+- Random 128-bit IV per password   # Should show Java 25 or higher### Prerequisites└── securevault.db                  # SQLite database (created at runtime)
+
+
+
+---   ```
+
+
+
+## 🧪 Testing- Java 17 or higher```
+
+
+
+### **Verify Encryption**3. **Run the Application**
+
+```bash
+
+sqlite3 securevault.db "SELECT password FROM credentials LIMIT 1;"   ```bash- Linux/Unix-based system (tested on Kali Linux)
+
+# Should see: 5BiYOKyP53aAfzSbSfsbhyXxsdA93rKat1UCR+ZPfZ0=
+
+# NOT plain text!   chmod +x run.sh
+
+```
+
+   ./run.sh## Features
+
+### **Test Features**
+
+- ✅ Session timeout (wait 5 min)   ```
+
+- ✅ Clipboard auto-clear (wait 31 sec after copy)
+
+- ✅ Manual lock button   ### Installation
+
+- ✅ Add/edit/delete credentials
+
+- ✅ Password generator   The `run.sh` script automatically:
+
+- ✅ Strength checker
+
+   - Downloads required JAR dependencies if missing### ✅ Implemented
+
+---
+
+   - Compiles all Java source files
+
+## 🎯 Future Enhancements
+
+   - Launches the application with proper classpath1. Clone or extract the project to your system- **SQLite Database Persistence**: All credentials stored in local database
+
+See `FUTURE_ENHANCEMENTS.md` for complete list (20+ features):
+
+
+
+- Browser extension (Chrome, Firefox, Edge)
+
+- File vault (encrypt photos, videos, documents)### Manual Compilation (Alternative)- **Password Strength Meter**: 
+
+- Two-Factor Authentication (TOTP)
+
+- Password breach detection
+
+- Cloud sync with E2E encryption
+
+- Mobile app (Android/iOS)```bash2. Navigate to the project directory:  - Live 5-segment bar in table
+
+- Import/Export (CSV, 1Password, LastPass)
+
+- And more...# Compile all source files
+
+
+
+---javac -cp "lib/*:." -d bin src/*.java```bash  - Animated strength checker dialog
+
+
+
+## 🚨 Important Notes
+
+
+
+⚠️ **Lost Password = Lost Data** (by design!)  # Run the applicationcd /home/abin/Documents/Secure_Valut/PRoejct  - Suggestions for improvement
+
+⚠️ **Always backup**: `cp securevault.db securevault_backup.db`  
+
+⚠️ **Keep passwords safe** - no recovery mechanismjava -cp "lib/*:bin" SecureVaultSwing
+
+
+
+---``````- **Password Generator**: Customizable length and character sets
+
+
+
+## 📞 Support
+
+
+
+### **Common Issues**## 👤 Default Users & Login- **Clipboard Auto-Clear**: Copies passwords with automatic clearing after timeout
+
+
+
+**Q: Passwords still plain text?**  
+
+A: Run migration: `java -cp "lib/*:bin" DatabaseMigration`
+
+The system comes with two pre-configured users:3. Make the run script executable:- **Theming**: Light, Dark, and Custom themes
+
+**Q: Can't decrypt passwords?**  
+
+A: Make sure you entered correct login password
+
+
+
+**Q: Session timeout too fast?**  | Username | Password | Credentials |```bash- **Modular Architecture**: Clean separation of concerns
+
+A: Edit `SecureVaultSwing.java`, change `SESSION_TIMEOUT` (default 5 min)
+
+|----------|----------|-------------|
+
+**Q: Clipboard not clearing?**  
+
+A: Normal if another app used clipboard after copy| **Abin** | Abin@2006 | 55 sample credentials |chmod +x run.sh
+
+
+
+---| **Advaith** | Advaith@2006 | 29 sample credentials |
+
+
+
+## 📈 Metrics```### Database Operations
+
+
+
+- **Code**: 2,300+ lines of Java### First Time Login
+
+- **Classes**: 10 Java source files
+
+- **Documentation**: 8,000+ lines1. Launch the application- **Insert**: Add new credentials (Title, Username, Password)
+
+- **Security Score**: 75/100
+
+- **Users**: Multi-user support (3 users currently)2. Enter username and password
+
+- **Credentials**: Unlimited encrypted storage
+
+3. Click **Login** to access your vault### Running the Application- **Update**: Edit existing credentials
+
+---
+
+4. Or click **Create User** to register a new account
+
+## 🎉 Status
+
+- **Delete**: Remove credentials from database
+
+✅ **Ready for Daily Use!**
+
+- Core features: Complete## 📖 User Guide
+
+- Security: AES-256 encryption active
+
+- Documentation: ComprehensiveSimply run:- **Select**: Load all credentials on login
+
+- Testing: Verified and working
+
+### Managing Credentials
+
+**56 credentials successfully encrypted! 🔒**
+
+```bash
+
+---
+
+#### Add New Credential
+
+**Version**: 1.0.0  
+
+**Author**: Abin  1. Click **Add** button in toolbar./run.sh## Compilation
+
+**Date**: October 29, 2025  
+
+**Status**: Production Ready (Phase 1 Complete)2. Fill in the form:
+
+
+
+---   - **Service**: Website/app name (e.g., "GitHub")```
+
+
+
+## 📋 Quick Commands   - **Username**: Your username/email
+
+
+
+```bash   - **Password**: Your password```bash
+
+# Compile
+
+javac -cp "lib/*:." -d bin src/*.java   - **Category**: Optional grouping (e.g., "Social Media")
+
+
+
+# Run3. Watch the live strength meter as you typeOr manually:javac -cp "lib/*:." -d bin src/*.java
+
+java -cp "lib/*:bin" SecureVaultSwing
+
+4. Click **Save**
+
+# Or use script
+
+./run.sh```bash```
+
+
+
+# Migration#### Edit Credential
+
+java -cp "lib/*:bin" DatabaseMigration
+
+1. Select a credential row in the tablejavac -cp "lib/*:." -d bin src/*.java
+
+# Backup
+
+cp securevault.db securevault_backup_$(date +%Y%m%d).db2. Click **Edit** button
+
+
+
+# Check encryption3. Modify the fieldsjava -cp "lib/*:bin" SecureVaultSwing## Running
+
+sqlite3 securevault.db "SELECT password FROM credentials LIMIT 3;"
+
+```4. Click **Save**
+
+
+
+---```
+
+
+
+**🚀 Ready to secure your passwords!**#### Delete Credential
+
 
 1. Select a credential row```bash
 

@@ -29,15 +29,15 @@ public class UserManager {
         // Check if default user exists
         String checkSql = "SELECT COUNT(*) FROM users WHERE username = ?";
         try (PreparedStatement pstmt = conn.prepareStatement(checkSql)) {
-            pstmt.setString(1, "Abin");
+            pstmt.setString(1, "test");
             ResultSet rs = pstmt.executeQuery();
             if (rs.next() && rs.getInt(1) == 0) {
-                // Create default user: Abin / Abin@2006
-                createUser("Abin", "Abin@2006");
+                // Create default demo user: test / 12345
+                createUser("test", "12345");
             }
         }
     }
-    public boolean createUser(String username, String password) throws SQLException {
+    public final boolean createUser(String username, String password) throws SQLException {
         // Generate random salt
         byte[] salt = generateSalt();
         String saltStr = Base64.getEncoder().encodeToString(salt);
@@ -96,6 +96,26 @@ public class UserManager {
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
                 return rs.getString("username");
+            }
+        }
+        return null;
+    }
+    
+    /**
+     * Gets the salt for a specific user (needed for encryption key derivation).
+     * 
+     * @param username The username
+     * @return The user's salt bytes, or null if user not found
+     * @throws SQLException If database error occurs
+     */
+    public byte[] getUserSalt(String username) throws SQLException {
+        String sql = "SELECT salt FROM users WHERE username = ?";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, username);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                String saltStr = rs.getString("salt");
+                return Base64.getDecoder().decode(saltStr);
             }
         }
         return null;

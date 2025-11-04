@@ -4,6 +4,7 @@ import java.awt.*;
 /**
  * Login dialog with username, password, show password toggle, and create user option
  */
+@SuppressWarnings("serial")
 public class LoginDialog extends JDialog {
     private JTextField usernameField;
     private JPasswordField passwordField;
@@ -13,6 +14,7 @@ public class LoginDialog extends JDialog {
     private String password;
     private boolean createNewUser = false;
     
+    @SuppressWarnings("this-escape")
     public LoginDialog(Frame parent) {
         super(parent, "SecureVault - Login", true);
         

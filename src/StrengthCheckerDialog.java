@@ -9,7 +9,9 @@ import java.awt.event.ActionListener;
  * Strength Checker Dialog with animated meter
  */
 public class StrengthCheckerDialog extends JDialog {
+    private static final long serialVersionUID = 1L;
     
+    @SuppressWarnings("this-escape")
     public StrengthCheckerDialog(JFrame parent, String prefill) {
         super(parent, "Password Strength Checker", false);
         

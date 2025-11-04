@@ -21,7 +21,9 @@ if [ ! -f "lib/slf4j-simple-2.0.9.jar" ]; then
     wget -q -O lib/slf4j-simple-2.0.9.jar https://repo1.maven.org/maven2/org/slf4j/slf4j-simple/2.0.9/slf4j-simple-2.0.9.jar
 fi
 
-# Run with complete classpath
-echo "Starting SecureVault..."
-java -cp "lib/*:bin" SecureVaultSwing
+# Run with complete classpath - Enhanced Version
+echo "🔐 Starting SecureVault Pro - Enhanced Edition..."
+echo "✨ Beautiful UI with all features!"
+# Put compiled classes (bin) first so the main class is found reliably, then include all jars in lib/
+java -cp "bin:lib/*" SecureVaultSwingEnhanced
 
