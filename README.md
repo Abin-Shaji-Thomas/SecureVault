@@ -302,6 +302,8 @@ SecureVault/
     ├── main_dashboard.png
     ├── password_health_dashboard.png
     └── password_generator.png
+
+```
 ---
 
 ## Contributing
@@ -389,19 +391,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - [ ] Multiple vault support
 
 ---
-
-## Star History
-
-If you find this project useful, please consider giving it a star on GitHub! It helps others discover the project.
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Abin-Shaji-Thomas/SecureVault&type=Date)](https://star-history.com/#Abin-Shaji-Thomas/SecureVault&Date)
-
----
-
-<div align="center">
-
-**Made with ?????? for the open-source community**
-
-[??? Back to Top](#securevault-pro---password-manager)
+[Back to Top](#securevault-pro---password-manager)
 
 </div>
