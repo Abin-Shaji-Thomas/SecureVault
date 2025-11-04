@@ -285,24 +285,23 @@ For more details, see [SECURITY.md](SECURITY.md).
 
 ```
 SecureVault/
-????????? src/                          # Java source files
-???   ????????? SecureVaultSwingEnhanced.java  # Main application class
-???   ????????? Database.java             # Database operations
-???   ????????? UserManager.java          # User authentication
-???   ????????? PasswordEncryption.java   # AES encryption implementation
-???   ????????? CategoryManager.java      # Category management
-???   ????????? AttachmentManager.java    # File attachment handling
-???   ????????? ...                       # Other supporting classes
-????????? lib/                          # Dependencies (JDBC, SLF4J)
-????????? bin/                          # Compiled classes (auto-generated)
-????????? docs/                         # Documentation files
-????????? screenshots/                  # Application screenshots
-????????? run.sh                        # Launch script
-????????? README.md                     # This file
-????????? LICENSE                       # MIT License
-????????? .gitignore                    # Git ignore rules
-```
-
+├── README.md                    # Main documentation
+├── LICENSE                      # MIT License
+├── CONTRIBUTING.md              # Contribution guidelines
+├── SECURITY.md                  # Security policy
+├── QUICKSTART.md               # Quick start guide
+├── run.sh                      # Launch script
+├── .gitignore                  # Git ignore rules
+├── src/                        # Java source files
+├── lib/                        # Dependencies (JDBC, SLF4J)
+├── docs/
+│   ├── INSTALLATION.md         # Installation guide
+│   ├── ARCHITECTURE.md         # Technical architecture
+│   └── CHANGELOG.md            # Version history
+└── screenshots/                # Application screenshots
+    ├── main_dashboard.png
+    ├── password_health_dashboard.png
+    └── password_generator.png
 ---
 
 ## Contributing
